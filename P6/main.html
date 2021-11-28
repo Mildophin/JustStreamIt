@@ -1,128 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="main.css">
-    <title>P6</title>
-</head>
-<body>
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-      <div>
-          <div class="modal-image" id="modal-image"></div>
-          <div class="modal-text" style="margin-bottom: 5px" id="modal-title"></div>
-          <div class="modal-text" id="modal-genres"></div>
-          <div class="modal-text" id="modal-date"></div>
-          <div class="modal-text" id="modal-rated"></div>
-          <div class="modal-text" id="modal-imdb"></div>
-          <div class="modal-text" id="modal-directors"></div>
-          <div class="modal-text" id="modal-actors"></div>
-          <div class="modal-text" id="modal-time"></div>
-          <div class="modal-text" id="modal-country"></div>
-          <div class="modal-text" id="modal-box"></div>
-          <div class="modal-text" id="modal-resume"></div>
-      </div>
-  </div>
-
-</div>
-
-
-<div class="container">
-<div class="banner">
-    <div class="titre">JustStreamit</div>
-</div>
-
-<div class="best-movie">
-    <div class="best-movie-text">
-    <div class="best-movie-title" id="best-movie-title">Loading...</div>
-    <div id="best-movie-resume">Loading...</div>
-    <button class="best-button" id="best-movie-button">Learn more about it</button>
-    </div>
-    <div id="b0" class="best-movie-image">
-    </div>
-</div>
-
-<div class="title">Les films les mieux notés</div>
-
-<div class="wrapper">
-  <ul class="carousel" data-target="carousel">
-    <li id="b1" class="card" data-target="card"></li>
-    <li id="b2" class="card" data-target="card"></li>
-    <li id="b3" class="card" data-target="card"></li>
-    <li id="b4" class="card" data-target="card"></li>
-    <li id="b5" class="card" data-target="card"></li>
-    <li id="b6" class="card" data-target="card"></li>
-    <li id="b7" class="card" data-target="card"></li>
-  </ul>
-</div>
-<div class="buttons-holder">
-    <button class="buttons" data-action="slideLeft">&#60;&#60;</button>
-    <button class="buttons" data-action="slideRight">&#62;&#62;</button>
-</div>
-
-<div class="title">Films-Noir</div>
-
-<div class="wrapper">
-  <ul class="carousel" data-target="carouselF">
-    <li id="f0" class="card" data-target="card"></li>
-    <li id="f1" class="card" data-target="card"></li>
-    <li id="f2" class="card" data-target="card"></li>
-    <li id="f3" class="card" data-target="card"></li>
-    <li id="f4" class="card" data-target="card"></li>
-    <li id="f5" class="card" data-target="card"></li>
-    <li id="f6" class="card" data-target="card"></li>
-  </ul>
-</div>
-<div class="buttons-holder">
-    <button class="buttons" data-action="slideLeftF">&#60;&#60;</button>
-    <button class="buttons" data-action="slideRightF">&#62;&#62;</button>
-</div>
-
-<div class="title">Science-Fiction</div>
-
-<div class="wrapper">
-  <ul class="carousel" data-target="carouselS">
-    <li id="s0" class="card" data-target="card"></li>
-    <li id="s1" class="card" data-target="card"></li>
-    <li id="s2" class="card" data-target="card"></li>
-    <li id="s3" class="card" data-target="card"></li>
-    <li id="s4" class="card" data-target="card"></li>
-    <li id="s5" class="card" data-target="card"></li>
-    <li id="s6" class="card" data-target="card"></li>
-  </ul>
-</div>
-<div class="buttons-holder">
-    <button class="buttons" data-action="slideLeftS">&#60;&#60;</button>
-    <button class="buttons" data-action="slideRightS">&#62;&#62;</button>
-</div>
-<div class="title">Histoire</div>
-
-<div class="wrapper">
-  <ul class="carousel" data-target="carouselH">
-    <li id="h0" class="card" data-target="card"></li>
-    <li id="h1" class="card" data-target="card"></li>
-    <li id="h2" class="card" data-target="card"></li>
-    <li id="h3" class="card" data-target="card"></li>
-    <li id="h4" class="card" data-target="card"></li>
-    <li id="h5" class="card" data-target="card"></li>
-    <li id="h6" class="card" data-target="card"></li>
-  </ul>
-</div>
-<div class="buttons-holder">
-    <button class="buttons" data-action="slideLeftH">&#60;&#60;</button>
-    <button class="buttons" data-action="slideRightH">&#62;&#62;</button>
-</div>
-<br><br>
-</div>
-
-<script src="main.js"></script>
-
-</body>
-
+    <head>
+        <!-- Partie header -->
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="main.css">
+        <title>JustStreamIt</title>
+    </head>
+    <body>
+        <!-- Partie modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <article>
+                    <div class="modal-image" id="modal-image"></div>
+                    <p class="modal-text" style="margin-bottom: 5px" id="modal-title"></p>
+                    <p class="modal-text" id="modal-genres"></p>
+                    <p class="modal-text" id="modal-date"></p>
+                    <p class="modal-text" id="modal-rated"></p>
+                    <p class="modal-text" id="modal-imdb"></p>
+                    <p class="modal-text" id="modal-directors"></p>
+                    <p class="modal-text" id="modal-actors"></p>
+                    <p class="modal-text" id="modal-time"></p>
+                    <p class="modal-text" id="modal-country"></p>
+                    <p class="modal-text" id="modal-box"></p>
+                    <p class="modal-text" id="modal-resume"></p>
+                </article>
+            </div>
+        </div>
+        <section class="container">
+            <div class="banner">
+                <h1 class="titre">
+                    JustStreamit
+                </h1>
+            </div>
+            <!-- Partie meilleur film -->
+            <div class="best-movie">
+                <div class="best-movie-text">
+                    <div class="best-movie-title" id="best-movie-title">
+                        Loading...
+                    </div>
+                    <div id="best-movie-resume">
+                        Loading...
+                    </div>
+                    <button class="best-button" id="best-movie-button">
+                        Learn more about it
+                    </button>
+                </div>
+                <div id="b0" class="best-movie-image">
+                </div>
+            </div>
+            <!-- Partie meilleurs films -->
+            <div class="title">
+                <h3>
+                    Top rated movies
+                </h3>
+            </div>
+            <div class="wrapper">
+                <ul class="carousel" data-target="carousel">
+                    <li id="b1" class="card" data-target="card"></li>
+                    <li id="b2" class="card" data-target="card"></li>
+                    <li id="b3" class="card" data-target="card"></li>
+                    <li id="b4" class="card" data-target="card"></li>
+                    <li id="b5" class="card" data-target="card"></li>
+                    <li id="b6" class="card" data-target="card"></li>
+                    <li id="b7" class="card" data-target="card"></li>
+                </ul>
+            </div>
+            <div class="buttons-holder">
+                <button class="buttons" data-action="slideLeft">&#60;&#60;</button>
+                <button class="buttons" data-action="slideRight">&#62;&#62;</button>
+            </div>
+            <!-- Partie meilleurs films noir -->
+            <div class="title">
+                <h3>
+                    Films-Noir
+                </h3>
+            </div>
+            <div class="wrapper">
+                <ul class="carousel" data-target="carouselF">
+                    <li id="f0" class="card" data-target="card"></li>
+                    <li id="f1" class="card" data-target="card"></li>
+                    <li id="f2" class="card" data-target="card"></li>
+                    <li id="f3" class="card" data-target="card"></li>
+                    <li id="f4" class="card" data-target="card"></li>
+                    <li id="f5" class="card" data-target="card"></li>
+                    <li id="f6" class="card" data-target="card"></li>
+                </ul>
+            </div>
+            <div class="buttons-holder">
+                <button class="buttons" data-action="slideLeftF">&#60;&#60;</button>
+                <button class="buttons" data-action="slideRightF">&#62;&#62;</button>
+            </div>
+            <!-- Partie meilleurs films de sci-fi -->
+            <div class="title">
+                <h3>
+                    Science-Fiction
+                </h3>
+            </div>
+            <div class="wrapper">
+                <ul class="carousel" data-target="carouselS">
+                    <li id="s0" class="card" data-target="card"></li>
+                    <li id="s1" class="card" data-target="card"></li>
+                    <li id="s2" class="card" data-target="card"></li>
+                    <li id="s3" class="card" data-target="card"></li>
+                    <li id="s4" class="card" data-target="card"></li>
+                    <li id="s5" class="card" data-target="card"></li>
+                    <li id="s6" class="card" data-target="card"></li>
+                </ul>
+            </div>
+            <div class="buttons-holder">
+                <button class="buttons" data-action="slideLeftS">&#60;&#60;</button>
+                <button class="buttons" data-action="slideRightS">&#62;&#62;</button>
+            </div>
+            <!-- Partie meilleurs films d'histoire -->
+            <div class="title">
+                <h3>
+                    History
+                </h3>
+            </div>
+            <div class="wrapper">
+                <ul class="carousel" data-target="carouselH">
+                    <li id="h0" class="card" data-target="card"></li>
+                    <li id="h1" class="card" data-target="card"></li>
+                    <li id="h2" class="card" data-target="card"></li>
+                    <li id="h3" class="card" data-target="card"></li>
+                    <li id="h4" class="card" data-target="card"></li>
+                    <li id="h5" class="card" data-target="card"></li>
+                    <li id="h6" class="card" data-target="card"></li>
+                </ul>
+            </div>
+            <div class="buttons-holder">
+                <button class="buttons" data-action="slideLeftH">&#60;&#60;</button>
+                <button class="buttons" data-action="slideRightH">&#62;&#62;</button>
+            </div>
+            <br><br>
+        </section>
+        <!-- Partie script -->
+        <script src="main.js"></script>
+    </body>
 </html>

@@ -5,6 +5,7 @@ let bestFilmNoir;
 let movie;
 let array = ["b", "f", "s", "h"];
 
+//Partie events listeners
 document.getElementById("best-movie-button").onclick = function () {
     displayModal();
     movie = bestMovies[0];
@@ -35,9 +36,8 @@ document.getElementById("b7").onclick = function () {
     updateMovie();
 }
 
-
+//Partie modal
 let modal = document.getElementById("myModal");
-
 
 let span = document.getElementsByClassName("close")[0];
 
@@ -56,6 +56,7 @@ window.onclick = function(event) {
 }
 
 
+//fonction fetching, qui va récupréer les données
 async function fetching(URL, quantityDesired) {
         let body;
         let next;
@@ -104,26 +105,26 @@ async function fetching(URL, quantityDesired) {
             let missing = quantityDesired - moviesList.length;
             await listFetching(next, missing);
         }
-
         }
         return moviesList;
 }
+
     fetching('http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score', 8).then(r => bestMovies = r)
     fetching('http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score&genre=Film-Noir', 7).then(r => bestFilmNoir = r)
     fetching('http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score&genre=Sci-Fi', 7).then(r => bestSciFi = r)
     fetching('http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score&genre=History', 7).then(r => bestHistory = r)
 
-function waitForElement(){
+function waitForElements(){
     if(typeof bestHistory !== "undefined" && typeof bestSciFi !== "undefined" && typeof bestMovies !== "undefined" && typeof bestFilmNoir !== "undefined"){
-        load();
+        loadElements();
     } else {
-        setTimeout(waitForElement, 100);
+        setTimeout(waitForElements, 100);
     }
 }
 
-waitForElement();
+waitForElements();
 
-function load () {
+function loadElements () {
     document.getElementById("best-movie-title").innerHTML = bestMovies[0]['title'];
     document.getElementById("best-movie-resume").innerHTML = "Description:" + bestMovies[0]['description'];
 
@@ -164,7 +165,6 @@ function updateMovie () {
 }
 
 //Partie Carousel
-
 const carousel = document.querySelector("[data-target='carousel']");
 const card = carousel.querySelector("[data-target='card']");
 const leftButton = document.querySelector("[data-action='slideLeft']");
