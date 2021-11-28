@@ -146,21 +146,21 @@ function load () {
 
 function updateMovie () {
     document.getElementById("modal-image").style.backgroundImage = "url(" + movie['image'] +")";
-    document.getElementById("modal-title").innerHTML = "Title: " + movie['title'];
-    document.getElementById("modal-genres").innerHTML = "Genres: " + movie['genres'];
-    document.getElementById("modal-date").innerHTML = "Date published: " + movie['date'];
-    document.getElementById("modal-rated").innerHTML = "Rated: " + movie['rated'];
-    document.getElementById("modal-imdb").innerHTML = "Imdb Score: " + movie['score'] + " /10";
-    document.getElementById("modal-directors").innerHTML = "Directors: " + movie['directors'];
-    document.getElementById("modal-actors").innerHTML = "Actors: " + movie['actors'];
-    document.getElementById("modal-time").innerHTML = "Duration: " + movie['duration'] + " minutes";
-    document.getElementById("modal-country").innerHTML = "Countries: " + movie['countries'];
+    document.getElementById("modal-title").innerHTML = "<span style='font-size: 23px'><span style='font-weight: bolder'>Title: " + "</span>" + movie['title'] + "</span>";
+    document.getElementById("modal-genres").innerHTML = "<span style='font-weight: bolder'>Genres: " + "</span>" + movie['genres'];
+    document.getElementById("modal-date").innerHTML = "<span style='font-weight: bolder'>Date published: " + "</span>" + movie['date'];
+    document.getElementById("modal-rated").innerHTML = "<span style='font-weight: bolder'>Rated: " + "</span>" + movie['rated'];
+    document.getElementById("modal-imdb").innerHTML = "<span style='font-weight: bolder'>Imdb Score: " + "</span>" + movie['score'] + " /10";
+    document.getElementById("modal-directors").innerHTML = "<span style='font-weight: bolder'>Directors: " + "</span>" + movie['directors'];
+    document.getElementById("modal-actors").innerHTML = "<span style='font-weight: bolder'>Actors: " + "</span>" + movie['actors'];
+    document.getElementById("modal-time").innerHTML = "<span style='font-weight: bolder'>Duration: " + "</span>" + movie['duration'] + " minutes";
+    document.getElementById("modal-country").innerHTML = "<span style='font-weight: bolder'>Countries: " + "</span>" + movie['countries'];
     if (movie['worldwide_gross_income'] === null) {
-        document.getElementById("modal-box").innerHTML = "World wide gross income: We don't know...";
+        document.getElementById("modal-box").innerHTML = "<span style='font-weight: bolder'>World wide gross income:</span> We don't know...";
     } else {
-        document.getElementById("modal-box").innerHTML = "World wide gross income: " + movie['worldwide_gross_income'] + " $";
+        document.getElementById("modal-box").innerHTML = "<span style='font-weight: bolder'>World wide gross income: " + "</span>" + movie['worldwide_gross_income'] + " $";
     }
-    document.getElementById("modal-resume").innerHTML = "Description: " + movie['description'];
+    document.getElementById("modal-resume").innerHTML = "<span style='font-weight: bolder'>Description: " + "</span>" + movie['description'];
 }
 
 //Partie Carousel
